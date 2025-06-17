@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Retro Sunset - Color Theme</title>
+  <link rel="stylesheet" href="./theme-style.css" />
+</head>
+<body>
+  <h1>🌅 Retro Sunset</h1>
+
+  <div class="grid">
+    <div class="combo-row">
+      <div class="color-block" style="background:#FF6F61">#FF6F61</div>
+      <div class="color-block" style="background:#F7CAC9">#F7CAC9</div>
+      <div class="color-block" style="background:#92A8D1">#92A8D1</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#F67280">#F67280</div>
+      <div class="color-block" style="background:#C06C84">#C06C84</div>
+      <div class="color-block" style="background:#6C5B7B">#6C5B7B</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#F8B195">#F8B195</div>
+      <div class="color-block" style="background:#F67280">#F67280</div>
+      <div class="color-block" style="background:#355C7D">#355C7D</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#FFA07A">#FFA07A</div>
+      <div class="color-block" style="background:#FA8072">#FA8072</div>
+      <div class="color-block" style="background:#E9967A">#E9967A</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#FFB347">#FFB347</div>
+      <div class="color-block" style="background:#FFD700">#FFD700</div>
+      <div class="color-block" style="background:#F08080">#F08080</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#FDFD96">#FDFD96</div>
+      <div class="color-block" style="background:#FFB6B6">#FFB6B6</div>
+      <div class="color-block" style="background:#B19CD9">#B19CD9</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#E1C699">#E1C699</div>
+      <div class="color-block" style="background:#C3B091">#C3B091</div>
+      <div class="color-block" style="background:#8B6D5C">#8B6D5C</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#DE6E4B">#DE6E4B</div>
+      <div class="color-block" style="background:#F0A202">#F0A202</div>
+      <div class="color-block" style="background:#D95D39">#D95D39</div>
+    </div>
+  </div>
+
+  <p><a href="../index.html" class="back-link">← Back to Tool</a></p>
+
+  <script>
+    document.querySelectorAll('.color-block').forEach(block => {
+      block.addEventListener('click', () => {
+        const hex = block.textContent;
+        navigator.clipboard.writeText(hex).then(() => {
+          const original = block.textContent;
+          block.textContent = 'Copied!';
+          setTimeout(() => {
+            block.textContent = original;
+          }, 800);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

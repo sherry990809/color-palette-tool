@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fresh Pastels - Color Theme</title>
+  <link rel="stylesheet" href="./theme-style.css" />
+</head>
+<body>
+  <h1>🌿 Fresh Pastels</h1>
+
+  <div class="grid">
+    <div class="combo-row">
+      <div class="color-block" style="background:#FADADD">#FADADD</div>
+      <div class="color-block" style="background:#FFE4E1">#FFE4E1</div>
+      <div class="color-block" style="background:#FFD1DC">#FFD1DC</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#D0F0C0">#D0F0C0</div>
+      <div class="color-block" style="background:#E0F8D8">#E0F8D8</div>
+      <div class="color-block" style="background:#C1E1C1">#C1E1C1</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#E3E4FA">#E3E4FA</div>
+      <div class="color-block" style="background:#DCD0FF">#DCD0FF</div>
+      <div class="color-block" style="background:#E6E6FA">#E6E6FA</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#FFE5B4">#FFE5B4</div>
+      <div class="color-block" style="background:#FFDEAD">#FFDEAD</div>
+      <div class="color-block" style="background:#FFF8DC">#FFF8DC</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#B3E5FC">#B3E5FC</div>
+      <div class="color-block" style="background:#D0F0FD">#D0F0FD</div>
+      <div class="color-block" style="background:#E1F5FE">#E1F5FE</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#FFFACD">#FFFACD</div>
+      <div class="color-block" style="background:#FAFAD2">#FAFAD2</div>
+      <div class="color-block" style="background:#FFFFE0">#FFFFE0</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#D8BFD8">#D8BFD8</div>
+      <div class="color-block" style="background:#E6CCE6">#E6CCE6</div>
+      <div class="color-block" style="background:#F3E5F5">#F3E5F5</div>
+    </div>
+    <div class="combo-row">
+      <div class="color-block" style="background:#FFDAB9">#FFDAB9</div>
+      <div class="color-block" style="background:#FFEFD5">#FFEFD5</div>
+      <div class="color-block" style="background:#FFEBCC">#FFEBCC</div>
+    </div>
+  </div>
+
+  <p><a href="../index.html" class="back-link">← Back to Tool</a></p>
+
+  <script>
+    document.querySelectorAll('.color-block').forEach(block => {
+      block.addEventListener('click', () => {
+        const hex = block.textContent;
+        navigator.clipboard.writeText(hex).then(() => {
+          const original = block.textContent;
+          block.textContent = 'Copied!';
+          setTimeout(() => {
+            block.textContent = original;
+          }, 800);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
